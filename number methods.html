@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let a = "99";
+        let num = Number(a);//converting into number
+        console.log(num);
+
+
+        let b = "50 years"
+        let num2 = parseInt(b); //converting into integer number
+
+        console.log(num2);
+
+
+        let c = "10.33"
+        let num3 = parseFloat(c); //return number float
+
+        console.log(num3);
+
+        let d = "1.33hello";
+        let num4 = Number.isFinite(d); //return number finite
+
+        console.log(num4);
+
+
+        let e = 100;
+        let num5 = Number.isInteger(e); //return number integer or not
+
+        console.log(num5);
+
+
+        
+        let f = 10.4446;
+        let num6 = f.toFixed(1); //return number fixed by giving digit
+
+        console.log(num6);
+
+
+        
+        let g = 1.444567;
+        let num7 = g.toPrecision(2); //return number by giving round fugure
+
+        console.log(num7);
+
+    </script>
+</body>
+</html>

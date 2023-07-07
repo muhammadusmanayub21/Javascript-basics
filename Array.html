@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // let fruits = ["Apple", "Orange", "Plum"];
+
+        // console.log( fruits[0] ); // Apple
+        // console.log( fruits[1] ); // Orange
+        // console.log( fruits[2] ); // Plum
+        // //We can replace an element:
+
+        // fruits[2] = 'Pear'; // now ["Apple", "Orange", "Pear"]
+        // console.log(fruits);
+        // console.log( fruits[2]);
+
+
+        //The total count of the elements in the array is its length:
+        // let fruits = ["Apple", "Orange", "Plum"];
+
+        // console.log(fruits.length); // 3
+        // console.log(fruits[fruits.length - 1]); //We can explicitly calculate the last element index and then access it
+        // console.log(fruits.at(-1)); //Luckily, there’s a shorter syntax: fruits.at(-1): for negative values of i, it steps back from the end of the array.
+
+
+        // // mix of values
+        // let arr = ['Apple', { name: 'John' }, true, function () { console.log('hello'); }];
+
+        // // get the object at index 1 and then show its name 
+        // console.log(arr[1].name); // John
+
+        // // get the function at index 3 and run it
+        // arr[3](); // hello
+
+
+
+        //METHOD OF ARRAY
+
+        // let fruits = ["Apple", "Orange", "Pear"];
+
+        // console.log(fruits.pop()); // remove "Pear" and console.log it
+
+        // fruits.push("usman") //Append the element to the end of the array:
+
+        // console.log(fruits); // Apple, Orange, usman
+
+        // console.log(fruits.shift()); //Extracts the first element of the array and returns it:
+
+        // console.log(fruits); // Apple, Orange,
+
+        // fruits.unshift("Apple");
+        // console.log(fruits); 
+
+
+        // let fruits = [];
+        // fruits[123] = "Apple";
+
+        // console.log(fruits.length); // 124
+
+        // let arr = [1, 2, 3, 4, 5];
+        // arr.length = 2;
+
+        // console.log(arr);
+
+        // arr.length = 5; //So, the simplest way to clear the array is: arr.length = 0;.
+        // console.log(arr[3]);
+
+
+
+        //task array
+        // 1) Create an array styles with items “Jazz” and “Blues”.
+        // 2) Append “Rock-n-Roll” to the end.
+        // 3) Replace the value in the middle with “Classics”. Your code for finding the middle value should work for any arrays with odd length.
+        // 4) Strip off the first value of the array and show it.
+        // 5) Prepend Rap and Reggae to the array.
+
+        // let styles = ["Jazz", "Blues"];
+        // console.log(styles);
+        // styles.push("Rock-n-Roll");
+        // console.log(styles);
+
+        // styles[Math.floor((styles.length - 1) / 2)] = "Classics";
+        // console.log(styles);
+
+        // alert(styles.shift());
+        // console.log(styles);
+
+        // styles.unshift("Rap", "Reggae");
+        // console.log(styles);
+
+
+
+        //TASK 3
+        // Write the function sumInput() that:
+        // Asks the user for values using prompt and stores the values in the array.
+        // Finishes asking when the user enters a non-numeric value, an empty string, or presses “Cancel”.
+        // Calculates and returns the sum of array items.
+        // P.S. A zero 0 is a valid number, please don’t stop the input on zero.
+
+        function sumInput() {
+
+            let numbers = [];
+
+            while (true) {
+
+                let value = prompt("A number please?", 0);
+
+                // should we cancel?
+                if (value === "" || value === null || !isFinite(value)) break;
+
+                numbers.push(+value);
+            }
+
+            let sum = 0;
+            for (let number of numbers) {
+                sum += number;
+            }
+            return sum;
+        }
+
+        console.log(sumInput());
+
+    </script>
+</body>
+
+</html>

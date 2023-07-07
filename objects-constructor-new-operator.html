@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+  
+// Constructor function
+
+// function User(name){
+//   this.name = name;
+//   this.isAdmin = false;
+//   return;
+// }
+// let user = new User("Usman");
+// console.log(user.name);
+
+/*
+//calculator using constructor function in object methods
+function Calculator() {
+
+  this.read = function() {
+    this.a = +prompt('a?', 0);
+    this.b = +prompt('b?', 0);
+  };
+
+  this.sum = function() {
+    return this.a + this.b;
+  };
+
+  this.mul = function() {
+    return this.a * this.b;
+  };
+}
+
+let calculator = new Calculator();
+calculator.read();
+
+alert( "Sum=" + calculator.sum() );
+alert( "Mul=" + calculator.mul() );
+*/
+    
+    
+    
+// function BigUser() {
+
+// this.name = "John";
+
+// return { name: "Godzilla" };  // <-- returns this object
+// }
+
+// console.log( new BigUser().name );  // Godzilla, got that object
+    
+    
+// function SmallUser() {
+
+// this.name = "John";
+
+// }
+// console.log( new SmallUser().name );  // John
+    
+    
+    
+let user = { 
+name: "John",
+ age: 30, 
+getthis : function () { // "this" is the "current object" 
+console.log(this); 
+} 
+}; 
+user.getthis(); // John
+    </script>
+</body>
+</html>

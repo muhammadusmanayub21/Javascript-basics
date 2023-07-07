@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let user = { name: 'John' };
+
+        // let admin = user;
+
+        // admin.name = 'Pete'; // changed by the "admin" reference
+
+        // alert(user.name); // 'Pete', changes are seen from the "user" reference
+        ///////////////////////////////////////
+        let a = {};
+        let b = a; // copy the reference
+
+        console.log(a == b); // true, both variables reference the same object
+        console.log(a === b); // true
+        ///////////////////////////////////////////////
+        //nested copy
+        let user = {
+            name: "John",
+            sizes: {
+                height: 182,
+                width: 50
+            }
+        };
+
+        let clone = structuredClone(user);
+
+        alert(user.sizes === clone.sizes); // false, different objects
+
+        // user and clone are totally unrelated now
+        user.sizes.width = 60;    // change a property from one place
+        alert(clone.sizes.width); // 50, not related
+
+
+    </script>
+</body>
+
+</html>

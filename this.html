@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      
+       //this in object method
+//        const person = {
+//     firstName: "John",
+//     lastName : "Doe",
+//     id       : 5566,
+//     getFullName : function() {
+//       return this.firstName + this.lastName;
+//     }
+// };
+
+// console.log('this in object method', person.getFullName()) ;
+ 
+
+//     let calculator = {
+//   sum() {
+//     return this.a + this.b;
+//   },
+
+//   mul() {
+//     return this.a * this.b;
+//   },
+
+//   read() {
+//     this.a = +prompt('a?', 0);
+//     this.b = +prompt('b?', 0);
+//   }
+// };
+
+// calculator.read();
+// alert( calculator.sum() );
+// alert( calculator.mul() );
+
+
+// const person = {
+//     firstName: "John",
+//     lastName : "Doe",
+//     id       : 5566,
+//     getThis : function() {
+//       return this;
+//     }
+// };
+
+// console.log('this in object method', person.getThis());
+    
+
+
+
+
+// // 'use strict'
+// function test() {
+//     console.log('this in a function', this);
+// }
+
+// test()
+
+// const show = () => this
+
+// console.log('arrow function this', show())
+
+// let  person = {
+//     name: 'Pedro',
+//     surname: 'Sanchez',
+//     sayName: function () {console.log(this.personName)
+//         console.log(this.name)
+// }};
+// console.log(person.sayName());
+
+// let personName = "usman";
+
+// let b  = 2;
+// function sayName(){
+
+//     let a = 3;
+//     console.log(this.a)
+// }
+// sayName();
+
+// const person1 = {
+//     name: 'Pedro',
+//     surname: 'Sanchez',
+//     sayName: function() {
+//         return this.name + " " + this.surname;
+//     }
+// }
+// const person2 = {
+//     name: 'Jimena',
+//     surname: 'Juarez'
+// }
+
+// console.log(person1.sayName.call(person2));
+
+// const person1 = {
+//     name: 'Pedro',
+//     surname: 'Sanchez',
+//     sayName: function(city, country) {
+//         return this.name + " " + this.surname + ", " + city + ", " + country;
+//     }
+// }
+
+// const person2 = {
+//     name: 'Jimena',
+//     surname: 'Juarez',
+
+// }
+
+// console.log(person1.sayName.apply(person2, ["usman","sarmad"], "mexico" , ));
+
+
+const person1 = {
+    name: 'Pedro',
+    surname: 'Sanchez',
+    sayName: function(city, Country) {
+        return this.name + " " + this.surname + ""+this.city;
+    }
+}
+
+const person2 = {
+    name: 'Jimena',
+    surname: 'Juarez'
+}
+
+const sayPerson2Name = person1.sayName.bind(person2, ["usman", "xyz"])
+
+console.log(sayPerson2Name())
+
+    </script>
+</body>
+</html>

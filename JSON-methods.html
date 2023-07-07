@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+let student = {
+  name: 'John',
+  age: 30,
+  isAdmin: false,
+  courses: ['html', 'css', 'js'],
+  spouse: null
+};
+
+let json = JSON.stringify(student);
+console.log(json);
+console.log(typeof json)
+
+let backjson = JSON.parse(json);
+console.log(backjson);
+console.log(typeof backjson)
+                                                                                                                                                                        
+
+
+
+
+    </script>
+</body>
+</html>

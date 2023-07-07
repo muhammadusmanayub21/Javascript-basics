@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var a = ["harry", 29, "Male", "BCA"];
+        console.log(a);
+
+        a[0] = "sunny"; //modify an array
+        delete a[2]; // delete an item in array
+
+        console.log(a)
+
+
+
+        let arr = ["sanjay", "usman", "rustam", "karan"];
+        console.log(arr)
+        arr.sort() //for sorting an array in order wise
+        console.log(arr);
+
+        arr.reverse()// for reverse an array
+        console.log(arr);
+
+        let arr2 = ["suny", "uzair"];
+
+        let arr3 = arr.concat(arr2); //Returns a newly created array after merging all arrays/values passed in the argument.
+
+        console.log(arr3)
+
+        let arr4 = arr3.join(" "); //joins two or more arrays and returns a result
+        console.log(arr4);
+
+        let arr5 = arr.slice(0, 2);// selects the part of an array and returns the new array
+        console.log(arr5);
+
+        arr.splice(2, 1, "neha", "koahaa"); //removes or replaces existing elements and/or adds new elements
+        console.log(arr);
+
+        var b = Array.isArray(arr); //for checking is aray or not
+        console.log(b);
+
+        ///////// search method of array
+
+        let array = ["sanjay", "usman", "rustam", "karan"];
+        var c = array.indexOf("usman", 2); // looks for item starting from index from, and returns the index where it was found, otherwise -1.
+        console.log(c);
+
+        var d = array.lastIndexOf("sanjay", 2); //The method arr.lastIndexOf is the same as indexOf, but looks for from right to left.
+        console.log(d);
+
+
+        var e = array.includes("rustam ") //looks for item starting from index from, returns true if found.
+        console.log(e);
+
+        var age = [10, 20, 30, 18];
+
+        var agecheck = age.some(checkAdult); // check if any array of element in an array exeist
+        console.log(agecheck)
+
+
+        function checkAdult(age) {
+            return age >= 18;
+        }
+
+        //findIndex
+        let users = [10,23,19,20];
+        console.log(users);
+
+        var userscheck = users.findIndex(checkAdult);
+        console.log(userscheck);
+
+        var userscheck2 = users.findLastIndex(checkAdult);
+        console.log(userscheck2);
+
+        // The arr.findIndex method has the same syntax, but returns the index where the element was found instead of the element itself. The value of -1 is returned if nothing is found.
+
+        // The arr.findLastIndex method is like findIndex, but searches from right to left, similar to lastIndexOf.
+
+        // If there may be many, we can use arr.filter(fn).
+
+
+        let someUsers = users.filter(checkAdult);
+        console.log(someUsers);
+
+
+
+        // array toString(),valueof(), and fill()
+
+
+        let Fit = ["amaan", "usmi", "billa"]
+
+        Fit.toString();
+
+        console.log(Fit);
+
+        Fit.valueOf();
+        console.log(Fit);
+
+        Fit.fill("Ram");
+
+        console.log(Fit);
+
+
+        //foreach method
+
+        var forArray = ["sanjay", "aman", "kamran" ]
+
+        forArray.forEach(function(value,index){
+            console.log( index  + ":" + value);
+
+        });
+
+         
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
+
+
+<!-- 
+    A cheat sheet of array methods:
+
+To add/remove elements:
+
+push(...items) – adds items to the end,
+pop() – extracts an item from the end,
+shift() – extracts an item from the beginning,
+unshift(...items) – adds items to the beginning.
+splice(pos, deleteCount, ...items) – at index pos deletes deleteCount elements and inserts items.
+slice(start, end) – creates a new array, copies elements from index start till end (not inclusive) into it.
+concat(...items) – returns a new array: copies all members of the current one and adds items to it. If any of items is an array, then its elements are taken.
+To search among elements:
+
+indexOf/lastIndexOf(item, pos) – look for item starting from position pos, return the index or -1 if not found.
+includes(value) – returns true if the array has value, otherwise false.
+find/filter(func) – filter elements through the function, return first/all values that make it return true.
+findIndex is like find, but returns the index instead of a value.
+To iterate over elements:
+
+forEach(func) – calls func for every element, does not return anything.
+To transform the array:
+
+map(func) – creates a new array from results of calling func for every element.
+sort(func) – sorts the array in-place, then returns it.
+reverse() – reverses the array in-place, then returns it.
+split/join – convert a string to array and back.
+reduce/reduceRight(func, initial) – calculate a single value over the array by calling func for each element and passing an intermediate result between the calls.
+Additionally:
+
+Array.isArray(value) checks value for being an array, if so returns true, otherwise false.
+Please note that methods sort, reverse and splice modify the array itself.
+
+These methods are the most used ones, they cover 99% of use cases. But there are few others:
+
+arr.some(fn)/arr.every(fn) check the array.
+
+The function fn is called on each element of the array similar to map. If any/all results are true, returns true, otherwise false.
+
+These methods behave sort of like || and && operators: if fn returns a truthy value, arr.some() immediately returns true and stops iterating over the rest of items; if fn returns a falsy value, arr.every() immediately returns false and stops iterating over the rest of items as well.
+ -->

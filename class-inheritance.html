@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /*
+        class Animal {
+  constructor(name) {
+    this.speed = 0;
+    this.name = name;
+  }
+  run(speed) {
+    this.speed = speed;
+    console.log(`${this.name} runs with speed ${this.speed}.`);
+  }
+  stop() {
+    this.speed = 0;
+    console.log(`${this.name} stands still.`);
+  }
+}
+
+let animal = new Animal("My animal");
+
+class Rabbit extends Animal {
+  hide() {
+    console.log(`${this.name} hides!`);
+  }
+  stop() {
+    super.stop(); // call parent stop
+    this.hide(); // and then hide
+  }
+}
+
+let rabbit = new Rabbit("White Rabbit");
+
+rabbit.run(5); // White Rabbit runs with speed 5.
+rabbit.stop(); //Now Rabbit has the stop method that calls the parent super.stop() in the process.
+
+*/
+
+
+        class employee {
+            constructor(name, age, salary) {
+                this.empname = name;
+                this.empage = age;
+                this.empsalary = salary;
+
+                console.log("constructor: Employee");
+            }
+            info() {
+                document.write(`<h2>Employee Data</h2>
+                        Name: ${this.empname}<br>
+                        Age: ${this.empage}<br>
+                        Salary: ${this.empsalary}<br>`);
+
+            }
+
+        }
+        class manager extends employee {
+            info() {
+                let ta = 1000;
+                let pa = 300;
+                let totalSalary = this.empsalary + ta + pa;
+                document.write(`<h2>Manager Data</h2>
+                        Name: ${this.empname}<br>
+                        Age: ${this.empage}<br>
+                        Salary: ${totalSalary}<br>`);
+
+            }
+
+        }
+        class test extends manager{
+            info(){
+               super.info();
+            }
+        }
+        let a = new test("yahoo baba", 25, 20000);
+        let b = new employee("baba", 22, 12000);
+
+        a.info();
+        b.info();
+
+    </script>
+</body>
+
+</html>

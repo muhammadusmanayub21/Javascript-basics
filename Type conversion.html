@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // stringg adding with number gives number
+        const sum = "20" + 30;
+        console.log(sum);
+
+        //string multiply with number gives number due to string type to number and then multiply
+        const mul = "20" * 30;
+        console.log(mul);
+
+        const boolean = true + false;
+        console.log(boolean);
+
+        const boolean2 = "hello" + true;
+        console.log(boolean2);
+
+        const Noo = "50" * true;
+        console.log(Noo)
+
+        const noo2 = "50" * false;
+        console.log(noo2)
+
+        const times = 35 * "hello"
+        console.log(times)// NaN
+
+        //Coercion
+        const string = ""
+        const number = 40
+        const booleans = true
+
+        console.log(!string)
+        // true - string is coerced to boolean `false`, then the NOT operator negates it
+
+        console.log(booleans + string)
+        // "true" - boolean is coerced to string "true", and concatenated with the empty string
+
+        console.log(40 + true)// 41 - boolean is coerced to number 1, and summed with 40
+
+
+
+        //double equality operator only checks values are equal 
+
+        const variable12 = 20
+        const variable22 = "20"
+
+        console.log(variable12 == variable22)// true
+
+        ////////////////////////////////////////////////////////////////////////////
+
+        //s=== triple equality operator does a strict check – that is, it strictly checks the values compared, as well as the types. 
+        const variable1 = 20
+        const variable2 = "20"
+
+        console.log(variable1 === variable2)// false
+
+        const variable3 = false
+        const variable4 = ""
+
+        console.log(variable3 === variable4)// false
+
+
+        //Explicit Type Conversion
+        const boolean1 = false
+
+        const booleanConvert = String(boolean1)
+
+        console.log(booleanConvert)// "false"
+
+        console.log(typeof booleanConvert)// string
+
+
+
+    </script>
+</body>
+
+</html

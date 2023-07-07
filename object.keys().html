@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // const myObject = {
+        //     a: "name",
+        //     b: 1,
+        //     c: true
+        // }
+
+        // console.log(myObject)
+        // console.log(myObject.a) //accesing key 
+        // console.log(Object.values(myObject)); //return object values in a array
+        // Object.keys(myObject).forEach((i) => {
+        //     console.log(myObject[i])
+
+        // })
+
+        // //example of using object.values to loop over property
+        // let user = {
+        //     name: "John",
+        //     age: 30
+        // };
+
+        // // loop over values
+        // for (let value of Object.values(user)) {
+        //     console.log(value); // John, then 30
+        // }
+
+/*
+        task 1 problem Statement:
+        There is a salaries object with arbitrary number of salaries.
+        Write the function sumSalaries(salaries) that returns the sum of all salaries using Object.values and the for..of loop.
+        If salaries is empty, then the result must be 0.
+*/
+/*
+        let salaries = {
+            "John": 100,
+            "Pete": 300,
+            "Mary": 250
+        };
+
+        function sumSalaries(salaries) {
+
+            let sum = 0;
+
+            for (let salary of Object.values(salaries)) {
+
+                sum += salary;
+            }
+
+            return sum;
+        }
+
+        console.log(sumSalaries(salaries));
+*/  
+/*
+task 2 problem Statement:Write a function count(obj) that returns the number of properties in the object:
+*/
+/*
+let user = {
+  name: 'John',
+  age: 30
+};
+
+console.log( count(user) ); // 2
+
+function count(user){
+
+    return Object.keys(user).length;
+
+}
+*/
+    </script>
+</body>
+
+</html>

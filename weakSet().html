@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //weak set=> tou can only store objects and it cant br iterated
+        let ws = new WeakSet();
+        var ob1 = {
+            name:"usman"
+        }
+        var ob2 = {};
+
+        ws.add(ob1);
+        ws.add(ob2);
+        console.log(ws);
+        console.log(ws.has(ob1));//true
+    </script>
+</body>
+</html>

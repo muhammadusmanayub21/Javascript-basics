@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+// First fullName variable defined in the global scope:
+const fullName = "Oluwatobi Sofela";
+
+// Nested functions containing two more fullName variables:
+function profile() {
+  const fullName = "Tobi Sho";
+  function sayName() {
+    const fullName = "Oluwa Sofe";
+    function writeName() {
+      return fullName;
+    }
+    return writeName();
+  }
+  return sayName();
+}
+
+
+
+
+
+        // function a() {
+        //     var b = 10;
+        //     console.log(b)
+        //     function c() {
+        //         console.log(b);
+        //     }
+        // }
+        // a();
+
+
+//         // Define a variable in the global scope:
+// const fullName = "Oluwatobi Sofela";
+
+// // Define nested functions:
+// function profile() {
+//   function sayName() {
+//     function writeName() {
+//       return fullName;
+//     }
+//     return writeName();
+//   }
+//   return sayName();
+// }
+    </script>
+</body>
+
+</html>

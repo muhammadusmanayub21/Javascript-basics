@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //ARRAY DESTRUCTURING IN JS
+
+        // let arr = ["john","smith"];
+
+        // let [firstName , LastName] = arr;
+
+        // console.log(firstName);
+        // console.log(LastName);
+
+        // // It looks great when combined with split or other array-returning methods:
+        // let [firstname, surname] = "john smith".split(' ');
+
+        // console.log(firstname);
+        // console.log(surname);
+
+
+        // let user = ["yahoo", 22, "Peshawar"];
+
+        // let[name, ...args] = user;
+
+        // console.log(name);
+        // console.log(args);
+
+
+        // function user([name, age = 20, city]){
+        //     console.log(name);
+        //     console.log(age);
+        //     console.log(city);
+
+        // }
+        // user(["yahoo", 22, "Peshawar"])
+
+
+        // function user(){
+        //     return ["yahoo", 22, "Peshawar"];
+        // }
+
+        // let [name, age, city] = user();
+
+        // console.log(name);
+        // console.log(age);
+        // console.log(city);
+
+
+
+
+        //DESTRUCTUING OBJECTS
+
+        // let user = {
+        //     name : "Usman ayub",
+        //     age : 25
+        // }
+
+        // // let {name, age} = user;
+        // let {name : n, age: a} = user; //we can also assign new keys
+
+        // console.log(n);
+        // console.log(a);
+
+
+
+
+        //REST "..."
+
+        // let array = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+
+        // let [name1, name2, ...titles] = array;
+
+        // console.log(name1);
+        // console.log(name2);
+        // console.log(titles);
+
+
+
+        // let [firstName, surname] = [];
+
+        // console.log(firstName); // undefined
+        // console.log(surname); // undefined
+
+
+
+        //rest in objects
+
+        // let options = {
+        //     title: "Menu",
+        //     height: 200,
+        //     width: 100
+        // };
+
+        // // title = property named title
+        // // rest = object with the rest of properties
+        // let { title, ...rest } = options;
+
+        // // now title="Menu", rest={height: 200, width: 100}
+        // console.log(rest.height);  // 200
+        // console.log(rest.width);   // 100
+
+
+
+        // Nested destructuring
+        // let options = {
+        //     size: {
+        //         width: 100,
+        //         height: 200
+        //     },
+        //     items: ["Cake", "Donut"],
+        //     extra: true
+        // };
+
+        // // destructuring assignment split in multiple lines for clarity
+        // let {
+        //     size: { // put size here
+        //         width,
+        //         height
+        //     },
+        //     items: [item1, item2], // assign items here
+        //     title = "Menu" // not present in the object (default value is used)
+        // } = options;
+
+        // console.log(title);  // Menu
+        // console.log(width);  // 100
+        // console.log(height); // 200
+        // console.log(item1);  // Cake
+        // console.log(item2);  // Donut
+
+
+
+
+
+        // Smart function parameters
+
+        // we pass object to function
+        let options = {
+            title: "My menu",
+            items: ["Item1", "Item2"]
+        };
+
+        // ...and it immediately expands it to variables
+        function showMenu({ title = "Untitled", width = 200, height = 100, items = [] }) {
+            // title, items – taken from options,
+            // width, height – defaults used
+            console.log(`${title} ${width} ${height}`); // My Menu 200 100
+            console.log(items); // Item1, Item2
+        }
+
+        showMenu(options);
+
+
+
+
+    </script>
+</body>
+
+</html>

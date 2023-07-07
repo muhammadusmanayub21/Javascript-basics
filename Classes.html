@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class User {
+
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            sayHi() {
+                console.log(this.name + this.age);
+            }
+
+            static staticMethod(){
+                console.log("Static method");
+            }
+
+        }
+
+        // Usage:
+        let user = new User("John", 25);
+        let user_two = new User("Usman Ayub", 29); 
+        user.sayHi();
+        user_two.sayHi();
+        User.staticMethod(); //isko call karna k liye object banana kki zaroratnai haii 
+        
+        // When new User("John") is called:
+        // A new object is created.
+        // The constructor runs with the given argument and assigns it to this.name.
+        // …Then we can call object methods, such as user.sayHi().
+
+    </script>
+</body>
+
+</html>

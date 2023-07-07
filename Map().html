@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let map = new Map([["a1", "Usman"], ["a2", "Ajay"]]);
+        console.log(map);
+
+        map.set("a3", "Hamzi");
+        console.log(map)
+
+        map.set("a3", "rustam")
+        console.log(map)
+
+        for (let [key, value] of map) {
+            console.log(`keys ${key} , value ${value} `);
+        }
+        map.forEach((key, value) => {
+            console.log(key, value)
+        })
+
+
+
+        let recipeMap = new Map([
+            ['cucumber', 500],
+            ['tomatoes', 350],
+            ['onion', 50]
+        ]);
+
+        // iterate over keys (vegetables)
+        for (let vegetable of recipeMap.keys()) {
+            console.log(vegetable); // cucumber, tomatoes, onion
+        }
+
+        // iterate over values (amounts)
+        for (let amount of recipeMap.values()) {
+            console.log(amount); // 500, 350, 50
+        }
+
+        // iterate over [key, value] entries
+        for (let entry of recipeMap) { // the same as of recipeMap.entries()
+            console.log(entry); // cucumber,500 (and so on)
+        }
+
+
+        // Object.entries: Map from Object
+
+        // array of [key, value] pairs
+        let mymap = new Map([
+            ['1', 'str1'],
+            [1, 'num1'],
+            [true, 'bool1']
+        ]);
+
+        console.log(mymap.get('1')); // str1
+        console.log(mymap.get(1)); // num1
+        console.log(mymap.get(true)); // bool1
+
+
+
+        // If we have a plain object, and we’d like to create a Map from it, then we can use built-in method Object.entries(obj) that returns an array of key/value pairs for an object exactly in that format.
+        // So we can create a map from an object like this:
+
+        let obj = {
+            name: "John",
+            age: 30
+        };
+
+        let newmap = new Map(Object.entries(obj));
+
+        console.log(newmap.get('name')); // John
+        console.log(newmap.get('age')); // 30
+
+
+        // Object.fromEntries: Object from Map so We can use Object.fromEntries to get a plain object from Map.
+
+
+
+
+    </script>
+</body>
+
+</html>

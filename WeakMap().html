@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //WeakMap
+
+        let wm = new WeakMap();
+
+        var ob1 = { name: "usman" }
+        var ob2 = {};
+
+        wm.set(ob1, "private");
+        wm.set(ob2, "private data");
+
+        console.log(wm);
+        console.log(wm.has(ob2));
+
+/*
+        // Example: Set Subset Operation
+
+        // perform subset operation
+        // true if all elements of set b is in set a
+        function subset(setA, setB) {
+            for (let i of setB) {
+                if (!setA.has(i)) {
+                    return false
+                }
+            }
+            return true
+        }
+
+        // two sets of fruits
+        let setA = new Set(['apple', 'mango', 'orange']);
+        let setB = new Set(['apple', 'orange']);
+
+        let result = subset(setA, setB);
+
+        console.log(result);
+*/
+    </script>
+</body>
+
+</html>

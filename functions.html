@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <Script>
+
+        /*
+   //variable inside function is visible only in inside of function
+   function myFunction(p1, p2) {
+    let result;
+  return p1 * p2;
+}
+result = myFunction(4, 3);
+console.log(result);
+*/
+
+        /*
+        //the function has full access to its outer variable
+        let userName = "john";
+        function showMessage(){
+            let message  = 'hello' + userName;
+            alert(message);
+        }
+        showMessage();
+        */
+
+        /*
+                // The function has full access to the outer variable. It can modify it as well.For instance:
+        
+                let userName = 'john';
+                function showMessage() {
+                    userName = 'Bob';
+                    let message = 'hello, ' + userName;
+                    alert(message);
+                }
+        
+                showMessage();
+                alert(userName);
+        */
+
+
+        // If a same-named variable is declared inside the function then it shadows the outer one.
+        //  For instance, in the code below the function uses the local userName. The outer one is ignored:
+
+        let userName = 'John';
+
+        function showMessage() {
+            let userName = "Bob"; // declare a local variable
+
+            let message = 'Hello, ' + userName; // Bob
+            alert(message);
+        }
+        // the function will create and use its own userName
+        showMessage();
+
+        alert(userName); // John, unchanged, the function did not access the outer variable
+
+
+
+        /*
+        // program to find the square of a number
+        // function is declared inside the variable
+        
+        let x = function (num) 
+        {
+             return num * num;
+        };
+        console.log(x(4));
+        
+        // can be used as variable value for other variables
+        let y = x(3);
+        console.log(y);
+        
+        */
+    </Script>
+</body>
+
+</html>
+
+<!-- // program to add two numbers
+// declaring a function
+function add(a, b) {
+    return a + b;
+}
+
+// take input from the user
+let number1 = parseFloat(prompt("Enter first number: "));
+let number2 = parseFloat(prompt("Enter second number: "));
+
+// calling function
+let result = add(number1,number2);
+
+// display the result
+console.log("The sum is " + result);
+
+// program to find the square of a number
+// function is declared inside the variable
+let x = function (num) { return num * num };
+console.log(x(4));
+
+// can be used as variable value for other variables
+let y = x(3);
+console.log(y);
+ -->

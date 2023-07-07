@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //async programing 
+        const datas = [
+            { name: "usman", Profession: "software engineer" },
+            { name: "ajay", Profession: "software engineer" }
+        ]
+
+        function getdatas() {
+            setTimeout(() => {
+                let output = "";
+                datas.forEach((data, index) => {
+                    output += `<li>${data.name}</li>`;
+
+                })
+                document.body.innerHTML = output
+            }, 1000);
+        }
+
+        function createdata(newdata, callback) {
+            // return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    datas.push(newdata);
+                    // let error = false;
+                    // if (!error) {
+                    //     resolve();
+                    // }
+                    // else {
+                    //     reject("kch sai nai haii")
+                    // }
+                }, 2000);
+
+        }
+
+        createdata({ name: "rustam", Profession: "software engineer" }, getdatas)
+        
+
+
+        // async function start() {
+        //     await createdata ({ name: "rustam", Profession: "software engineer" })
+
+        //     getdatas();
+        // }
+        // start();
+    </script>
+</body>
+
+</html>
